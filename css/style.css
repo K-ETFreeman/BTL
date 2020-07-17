@@ -1470,12 +1470,12 @@ textarea {
   transition: .4s ease;
   position: -webkit-sticky;
   position: sticky;
-  top: 60px;
-  left: 5%;
+  top: 5vh;
+  left: calc(95% - 60px);
   display: block;
-  width: 36px;
-  height: 36px;
-  margin-bottom: -36px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: -60px;
   z-index: 10;
   border-radius: 50%;
   background-color: white;
@@ -1490,9 +1490,9 @@ textarea {
 #up:not(.visible) {
   opacity: 0;
   pointer-events: none;
-  -webkit-transform: translateY(-200px);
-      -ms-transform: translateY(-200px);
-          transform: translateY(-200px);
+  -webkit-transform: translateY(calc(-7vh - 100%));
+      -ms-transform: translateY(calc(-7vh - 100%));
+          transform: translateY(calc(-7vh - 100%));
 }
 
 .ibg {
