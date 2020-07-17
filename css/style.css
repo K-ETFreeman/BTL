@@ -3407,6 +3407,12 @@ section {
     padding-bottom: 5px;
   }
 
+  #up {
+    left: calc(95% - 40px);
+    width: 40px;
+    height: 40px;
+  }
+
   .grid__tile {
     width: 100% !important;
   }
