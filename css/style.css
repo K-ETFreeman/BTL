@@ -2609,7 +2609,7 @@ section {
 }
 
 .testimonials__content {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .testimonials__title {
@@ -3773,6 +3773,10 @@ section {
     margin-bottom: calc(10px + (100vw - 320px) * (0.01116));
   }
 
+  .results__bgtext:nth-child(2) {
+    top: calc(0px + (100vw - 320px) * (-0.04464));
+  }
+
   .results__description ul,
   .results__description ul li {
     padding-bottom: calc(10px + (100vw - 320px) * (0.03348));
@@ -3793,7 +3797,7 @@ section {
   }
 
   .testimonials__content {
-    padding-top: calc(20px + (100vw - 320px) * (0.08929));
+    padding-top: calc(20px + (100vw - 320px) * (0.04464));
   }
 
   .testimonials__arrow {
