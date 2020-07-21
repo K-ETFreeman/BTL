@@ -3702,15 +3702,15 @@ section {
   }
 
   section {
-    padding-top: calc(20px + (100vw - 320px) * (0.13393));
+    padding-top: calc(40px + (100vw - 320px) * (0.08929));
   }
 
   section {
-    padding-bottom: calc(20px + (100vw - 320px) * (0.13393));
+    padding-bottom: calc(40px + (100vw - 320px) * (0.08929));
   }
 
   .BTL__bgtext {
-    top: calc(-40px + (100vw - 320px) * (0.11161));
+    top: calc(20px + (100vw - 320px) * (-0.02232));
   }
 
   .BTL__text {
@@ -3735,6 +3735,10 @@ section {
 
   .tile__list li {
     font-size: calc(14px + (100vw - 320px) * (0.00893));
+  }
+
+  .aboutus__container {
+    padding-top: calc(20px + (100vw - 320px) * (-0.04464));
   }
 
   .advantages__item {
