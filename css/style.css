@@ -191,28 +191,6 @@ h2 {
   line-height: 1.2;
 }
 
-.number {
-  color: #3ea3f2;
-  font-family: Montserrat;
-  font-size: 36px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.bgtext {
-  z-index: -1;
-  position: absolute;
-  color: rgba(233, 233, 233, 0.4);
-  font-size: 147px;
-  font-family: Raleway;
-  font-weight: 800;
-}
-
-.bgtext__less {
-  font-family: Raleway;
-  font-size: 96px;
-}
-
 .numblist__small {
   counter-reset: list-counter;
 }
@@ -268,44 +246,6 @@ h2 {
   border-radius: 50%;
   font-size: 22px;
   font-weight: 500;
-}
-
-.button {
-  width: 243px;
-  height: 46px;
-  font-family: Raleway;
-  font-size: 18px;
-  font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.button_blue {
-  color: white;
-  background-color: #3ea3f2;
-  -webkit-box-shadow: 0 20px 25px -10px rgba(62, 163, 242, 0.5);
-          box-shadow: 0 20px 25px -10px rgba(62, 163, 242, 0.5);
-}
-
-.button_black {
-  color: #3e3f43;
-  background-color: transparent;
-  border: 1px solid #3e3f43;
-}
-
-.button_white {
-  color: #3e3f43;
-  background-color: white;
 }
 
 .inputwrapper {
@@ -430,6 +370,50 @@ textarea {
   padding-bottom: 56.2%;
 }
 
+.number {
+  color: #3ea3f2;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo svg {
+  width: 39px;
+  height: 39px;
+  margin-right: 10px;
+}
+
+.logo__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.45px;
+  font-family: Raleway;
+  font-weight: 500;
+}
+
+.logo__upper {
+  font-size: 18px;
+}
+
 .header {
   position: relative;
   font-family: Raleway;
@@ -544,23 +528,6 @@ textarea {
   -webkit-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header__logoblock svg:first-child {
-  width: 39px;
-  height: 39px;
-  margin-right: 10px;
-}
-
-.header__logoblock svg:nth-child(2) {
-  width: 67px;
-  height: 37px;
 }
 
 .header__nav {
@@ -1495,25 +1462,56 @@ textarea {
           transform: translateY(calc(-7vh - 100%));
 }
 
-.ibg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+.button {
+  width: 243px;
+  height: 46px;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
-.ibg_logobg {
-  background-position: 110% 30%;
+.button_blue {
+  color: white;
+  background-color: #3ea3f2;
+  -webkit-box-shadow: 0 20px 25px -10px rgba(62, 163, 242, 0.5);
+          box-shadow: 0 20px 25px -10px rgba(62, 163, 242, 0.5);
 }
 
-.ibg__image {
-  width: 0;
-  height: 0;
+.button_black {
+  color: #3e3f43;
+  background-color: transparent;
+  border: 1px solid #3e3f43;
+}
+
+.button_white {
+  color: #3e3f43;
+  background-color: white;
+}
+
+.bgtext {
+  z-index: -1;
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
+  color: rgba(233, 233, 233, 0.4);
+  font-size: 147px;
+  font-family: Raleway;
+  font-weight: 800;
+}
+
+.bgtext__less {
+  font-family: Raleway;
+  font-size: 96px;
 }
 
 .wrapper {
@@ -1645,7 +1643,7 @@ section {
 
 .services__bgtext_1 {
   right: 0px;
-  top: 130px;
+  top: 100px;
 }
 
 .services__bgtext_2 {
@@ -2133,11 +2131,11 @@ section {
 }
 
 .stages__title {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 
 .stages__bgtext {
-  top: -20px;
+  top: -70px;
 }
 
 .stages__bgtext {
@@ -2610,13 +2608,17 @@ section {
           transform: translateX(-50%) translateY(-50%);
 }
 
+.testimonials__content {
+  padding-top: 70px;
+}
+
 .testimonials__title {
   position: relative;
   margin-bottom: 60px;
 }
 
 .testimonials__bgtext {
-  top: -40px;
+  top: -110px;
 }
 
 .testimonials__swiper {
@@ -3743,12 +3745,16 @@ section {
     font-size: calc(14px + (100vw - 320px) * (0.00446));
   }
 
-  .stages__title {
-    margin-bottom: calc(30px + (100vw - 320px) * (0.15625));
+  .stages__bgtext {
+    top: calc(0px + (100vw - 320px) * (-0.15625));
   }
 
   .stages__123 {
     maring-bottom: calc(20px + (100vw - 320px) * (0.06696));
+  }
+
+  .stages__item-bgtext {
+    font-size: calc(150px + (100vw - 320px) * (0.11161));
   }
 
   .cases__swiper {
@@ -3780,6 +3786,10 @@ section {
 
   .results__title {
     margin-bottom: calc(10px + (100vw - 320px) * (0.03348));
+  }
+
+  .testimonials__content {
+    padding-top: calc(20px + (100vw - 320px) * (0.08929));
   }
 
   .testimonials__arrow {
@@ -3956,6 +3966,14 @@ section {
 
   .BTL__title {
     font-size: calc(22px + (100vw - 320px) * (0.06429));
+  }
+
+  .stages__title {
+    margin-bottom: calc(60px + (100vw - 320px) * (0.21429));
+  }
+
+  .stages__bgtext {
+    font-size: calc(60px + (100vw - 320px) * (0.31071));
   }
 }
 
@@ -4192,6 +4210,16 @@ section {
 
   .results__bgtext:first-child {
     bottom: calc(100px + (100vw - 320px) * (-0.12712));
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 320px) {
+  .testimonials__bgtext {
+    font-size: calc(35px + (100vw - 320px) * (0.12727));
+  }
+
+  .testimonials__bgtext {
+    top: calc(-40px + (100vw - 320px) * (-0.07955));
   }
 }
 
