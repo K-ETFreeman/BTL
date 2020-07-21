@@ -1020,9 +1020,9 @@ textarea {
   bottom: 0;
   left: 0;
   width: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(50%, #f8f8f8), to(transparent));
-  background-image: -o-linear-gradient(left, #f8f8f8 0%, #f8f8f8 50%, transparent 100%);
-  background-image: linear-gradient(90deg, #f8f8f8 0%, #f8f8f8 50%, transparent 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#f8f8f8), color-stop(50%, #f8f8f8), to(rgba(248, 248, 248, 0)));
+  background-image: -o-linear-gradient(left, #f8f8f8 0%, #f8f8f8 50%, rgba(248, 248, 248, 0) 100%);
+  background-image: linear-gradient(90deg, #f8f8f8 0%, #f8f8f8 50%, rgba(248, 248, 248, 0) 100%);
 }
 
 .tags-linewrapper::after {
@@ -1033,9 +1033,9 @@ textarea {
   bottom: 0;
   left: calc(100% - 20px);
   width: 20px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, #f8f8f8), to(#f8f8f8));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #f8f8f8 50%, #f8f8f8 100%);
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #f8f8f8 50%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(248, 248, 248, 0)), color-stop(50%, #f8f8f8), to(#f8f8f8));
+  background-image: -o-linear-gradient(left, rgba(248, 248, 248, 0) 0%, #f8f8f8 50%, #f8f8f8 100%);
+  background-image: linear-gradient(90deg, rgba(248, 248, 248, 0) 0%, #f8f8f8 50%, #f8f8f8 100%);
 }
 
 .tags-linewrapper .tags-line .tags-line-item-close {
