@@ -771,11 +771,6 @@ textarea {
   position: relative;
 }
 
-.headline__contacts svg {
-  position: relative;
-  top: 2px;
-}
-
 .headline__contacts a {
   margin-right: 40px;
 }
@@ -1010,6 +1005,11 @@ textarea {
       -ms-transform: scale(1);
           transform: scale(1);
   width: 23px;
+}
+
+.tags-linewrapper {
+  width: calc(100% - 2px);
+  margin: 0 auto;
 }
 
 .tags-linewrapper::before {
@@ -3073,8 +3073,8 @@ section {
   .headline__contacts a:nth-child(1) {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    -webkit-animation-delay: -2s;
-            animation-delay: -2s;
+    -webkit-animation-delay: -6s;
+            animation-delay: -6s;
     -webkit-animation-name: roll;
             animation-name: roll;
     -webkit-animation-duration: 6s;
@@ -3086,8 +3086,8 @@ section {
   .headline__contacts a:nth-child(2) {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    -webkit-animation-delay: -4s;
+            animation-delay: -4s;
     -webkit-animation-name: roll;
             animation-name: roll;
     -webkit-animation-duration: 6s;
@@ -3099,8 +3099,8 @@ section {
   .headline__contacts a:nth-child(3) {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
     -webkit-animation-name: roll;
             animation-name: roll;
     -webkit-animation-duration: 6s;
