@@ -218,14 +218,6 @@
           d="M8 1.15834C6.19455 1.15834 4.75078 2.52588 4.75078 4.18959C4.75078 5.85331 6.19455 7.22085 8 7.22085C9.80545 7.22085 11.2492 5.85331 11.2492 4.18959C11.2492 2.52588 9.80545 1.15834 8 1.15834ZM3.88592 4.18959C3.88592 2.04575 5.73882 0.32666 8 0.32666C10.2612 0.32666 12.1141 2.04575 12.1141 4.18959C12.1141 6.33343 10.2612 8.05253 8 8.05253C5.73882 8.05253 3.88592 6.33343 3.88592 4.18959ZM8 10.4965C4.86643 10.4965 2.16725 11.9805 0.801379 14.1278C0.676758 14.3237 0.410576 14.3853 0.206845 14.2655C0.00311314 14.1457 -0.0610185 13.8897 0.0636026 13.6938C1.59875 11.2804 4.58928 9.66482 8 9.66482C11.4107 9.66482 14.4012 11.2804 15.9364 13.6938C16.061 13.8897 15.9969 14.1457 15.7932 14.2655C15.5894 14.3853 15.3232 14.3237 15.1986 14.1278C13.8328 11.9805 11.1336 10.4965 8 10.4965Z"
           />
       </symbol>
-      <symbol viewBox="0 0 17 16" id="icon-comment">
-        <g>
-          <g>
-            <path
-              d="M8.35.7C4.054.7.7 3.518.7 6.85.7 10.182 4.054 13 8.35 13c.601 0 1.186-.056 1.746-.161l.175-.033.13.122c.765.719 1.388 1.16 2.058 1.461.435.195.898.334 1.448.447a5.13 5.13 0 0 1-.58-.85c-.294-.553-.447-1.143-.518-1.907l-.02-.218.185-.114C14.834 10.612 16 8.828 16 6.85 16 3.518 12.646.7 8.35.7zM0 6.85C0 3.002 3.81 0 8.35 0c4.54 0 8.35 3.002 8.35 6.85 0 2.2-1.258 4.134-3.172 5.376.073.591.203 1.029.417 1.43.242.455.602.886 1.155 1.449l.722.735-1.02-.143c-1.049-.148-1.867-.327-2.63-.67-.723-.323-1.376-.784-2.121-1.469a10.18 10.18 0 0 1-1.701.142C3.81 13.7 0 10.698 0 6.85zm5.35 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.5 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
-          </g>
-        </g>
-      </symbol>
       <symbol viewBox="0 0 18 20" id="icon-attach">
         <g>
           <g transform="rotate(40.94 9 10)">
@@ -1132,23 +1124,21 @@
               <svg>
                 <use xlink:href="#icon-user"></use>
               </svg>
-              <input autocomplete="off" placeholder="Ваше имя*" name="name" type="text">
+              <input required autocomplete="off" placeholder="Ваше имя*" name="name" type="text">
             </div>
             <div class="inputwrapper">
               <svg>
                 <use xlink:href="#icon-mail"></use>
               </svg>
-              <input autocomplete="off" placeholder="E-mail" name="email" type="email">
+              <input required autocomplete="off" placeholder="E-mail*" name="email" type="email">
             </div>
-            <div class="inputwrapper">
+            <div class="inputwrapper">  
               <svg>
                 <use xlink:href="#icon-tele"></use>
               </svg>
-              <input autocomplete="off" placeholder="Телефон*" name="tel" type="tel">
+              <input required autocomplete="off" placeholder="Телефон*" name="tel" type="tel">
             </div>
-            <div class="inputwrapper"> <svg>
-                <use xlink:href="#icon-comment"></use>
-              </svg><textarea placeholder="Описание" name="description"></textarea>
+            <div class="inputwrapper"> <textarea placeholder="Описание" name="description"></textarea>
               <div class="attachfile">
                 <div class="attachfile__text">Приложить<br>файл</div>
                 <div class="attachfile__wrapper"><svg class="attachfile__icon">

@@ -60,7 +60,7 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
     535: {
       slidesPerView: 2
     },
-    800: {
+    820: {
       slidesPerView: 3
     },
     1024: {
@@ -497,4 +497,8 @@ document.querySelectorAll('.interactive-trigger').forEach(function (item) {
   });
 }
 ;
+var textarea = document.querySelector('.calculation__form textarea');
+textarea.addEventListener('input', function () {
+  if (textarea.offsetHeight < textarea.scrollHeight) textarea.classList.add('overflow');else textarea.classList.remove('overflow');
+});
 objectFitImages();
