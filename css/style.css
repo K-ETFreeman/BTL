@@ -2773,6 +2773,29 @@ section {
   height: 81px;
 }
 
+.seo {
+  position: relative;
+}
+
+.seo__bgtext {
+  line-height: 90%;
+}
+
+.seo__bgtext span {
+  font-family: Raleway;
+  display: block;
+}
+
+.seo__bgtext_1 {
+  right: 0px;
+  top: 50px;
+}
+
+.seo__bgtext_2 {
+  left: 0;
+  bottom: 0px;
+}
+
 .seo__title {
   color: #3ea3f2;
   padding-bottom: 50px;
