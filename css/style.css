@@ -1068,11 +1068,6 @@ textarea.overflow + .attachfile {
 
 /* here described the last tagline */
 
-.footerTags {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .footerTags-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1106,8 +1101,10 @@ textarea.overflow + .attachfile {
 }
 
 .footer {
+  padding-top: 80px;
   font-family: Montserrat;
   color: #3e3f43;
+  background-color: #f0f0f0;
 }
 
 .footer__content {
@@ -3710,6 +3707,10 @@ section {
 
   .headline__recall {
     letter-spacing: calc(-1px + (100vw - 320px) * (0.00223));
+  }
+
+  .footer {
+    padding-top: calc(20px + (100vw - 320px) * (0.08929));
   }
 
   .footer__content {
