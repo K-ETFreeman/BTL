@@ -61,10 +61,13 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
       slidesPerView: 2
     },
     820: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      spaceBetween: 35
     },
-    1024: {
-      slidesPerView: 4
+    1200: {
+      allowTouchMove: false,
+      slidesPerView: 4,
+      spaceBetween: 35
     }
   },
   navigation: {

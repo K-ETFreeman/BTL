@@ -2930,6 +2930,22 @@ section {
     border-top-color: #3ea3f2;
   }
 
+  .BTL__content {
+    width: 103%;
+  }
+
+  .results__content {
+    width: 100%;
+  }
+
+  .results__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .subnav__swiper ul {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -2951,20 +2967,6 @@ section {
   .subnav__left,
   .subnav__right {
     display: none;
-  }
-
-  .BTL__content {
-    width: 103%;
-  }
-
-  .results__content {
-    width: 100%;
-  }
-
-  .results__content {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
