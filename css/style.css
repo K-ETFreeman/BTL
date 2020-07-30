@@ -1425,7 +1425,6 @@ textarea.overflow + .attachfile {
       -ms-flex-align: center;
           align-items: center;
   width: 86.25vw;
-  position: relative;
 }
 
 .subnav__link a {
@@ -1434,11 +1433,18 @@ textarea.overflow + .attachfile {
   font-weight: 500;
   color: #3e3f43;
   white-space: nowrap;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
+  position: relative;
 }
 
-.subnav__link::after {
+.subnav__link a::after {
   position: absolute;
   -webkit-transition: .15s ease-out;
   -o-transition: .15s ease-out;
@@ -1452,7 +1458,7 @@ textarea.overflow + .attachfile {
   background-color: #3ea3f2;
 }
 
-.subnav__link:hover::after {
+.subnav__link a:hover::after {
   height: 6px;
   max-height: 6px;
 }
