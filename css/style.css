@@ -1424,9 +1424,7 @@ textarea.overflow + .attachfile {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: .3s ease;
-  -o-transition: .3s ease;
-  transition: .3s ease;
+  width: 86.25vw;
   position: relative;
 }
 
@@ -3719,6 +3717,12 @@ section {
   }
 }
 
+@media screen and (min-width: 750px) {
+  .subnav__link {
+    width: calc(86.25vw / 2);
+  }
+}
+
 @media screen and (min-width: 769px) {
   .tile__title_width50 {
     max-width: 50%;
@@ -3735,6 +3739,12 @@ section {
 
   .aboutus__numbers {
     min-width: 457px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .subnav__link {
+    width: calc(86.25vw / 3);
   }
 }
 
@@ -3837,9 +3847,27 @@ section {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .subnav__link {
+    width: calc(86.25vw / 4);
+  }
+}
+
 @media screen and (min-width: 1481px) {
   .aboutus__numbers {
     min-width: 720px;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .subnav__link {
+    width: calc(86.25vw / 5);
+  }
+}
+
+@media screen and (min-width: 1682px) {
+  .subnav__link {
+    width: 280px;
   }
 }
 

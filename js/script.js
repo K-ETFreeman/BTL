@@ -116,7 +116,15 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
   direction: 'horizontal',
   slidesPerView: 'auto',
   on: {
-    init: calculateAll,
+    init: function init() {
+      calculateAll();
+      var style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = '.subnav__link { transition: .15s ease-out; }';
+      setTimeout(function () {
+        return document.getElementsByTagName('head')[0].appendChild(style);
+      }, 300);
+    },
     resize: calculateAll,
     slideChangeTransitionStart: calculateAll,
     breakpoint: function breakpoint() {
