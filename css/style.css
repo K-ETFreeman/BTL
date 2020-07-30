@@ -1930,7 +1930,6 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px;
-  cursor: pointer;
   margin-bottom: 12px;
 }
 
@@ -2021,8 +2020,16 @@ section {
   color: white;
 }
 
+.tile ul li a {
+  color: white;
+}
+
 .tile_gray {
   background-color: #e9e9e9;
+}
+
+.tile_gray ul li a {
+  color: #3e3f43;
 }
 
 .tile_gray .tile__icon,
@@ -2075,14 +2082,12 @@ section {
 }
 
 .tile__list li {
-  font-family: Raleway;
-  font-size: 18px;
   margin-bottom: 5px;
-  color: white;
 }
 
-.tile__list_width75 {
-  max-width: 75%;
+.tile__list li a {
+  font-family: Raleway;
+  font-size: 18px;
 }
 
 .tile__svg-bg {
@@ -2095,6 +2100,10 @@ section {
 
 .tile__svg-bg_widthfree {
   max-width: 100%;
+}
+
+.tile__svg-bg_forceheight {
+  height: 90%;
 }
 
 .tile__bg {
@@ -2295,7 +2304,7 @@ section {
   line-height: 70%;
   font-weight: 800;
   color: #c4c4c4 !important;
-  opacity: .2 !important;
+  opacity: 0.2 !important;
   font-family: Montserrat !important;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -2701,9 +2710,9 @@ section {
   width: 100%;
   height: 100%;
   opacity: 0;
-  -webkit-transition: .4s ease;
-  -o-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
   background-color: #3ea3f2;
 }
 
@@ -3899,7 +3908,7 @@ section {
     font-size: calc(16px + (100vw - 320px) * (0.01339));
   }
 
-  .tile__list li {
+  .tile__list li a {
     font-size: calc(14px + (100vw - 320px) * (0.00893));
   }
 
