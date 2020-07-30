@@ -51,23 +51,95 @@ document.addEventListener('scroll', function () {
   }
 });
 ;
+var subSwiper = document.querySelector('.subnav__swiper .swiper-wrapper');
+
+var getActive = function getActive() {
+  return subSwiper.querySelector('.swiper-slide-active');
+};
+
+var count = 1;
+
+var setMarginValue = function setMarginValue(item, swiperWidth, baseMargin, defaultMargin) {
+  var j = 0,
+      totalWidth = 0,
+      currentWidth = 0;
+
+  for (var _i = item; j < count; j++) {
+    currentWidth = _i.children[0].offsetWidth;
+    totalWidth += currentWidth;
+
+    _i.style.setProperty('width', currentWidth + 'px');
+
+    console.log(totalWidth);
+    _i = _i.nextElementSibling;
+  }
+
+  j = 0;
+  var marginValue1 = (swiperWidth - totalWidth) / (count - 1);
+  var marginValue2 = (swiperWidth - totalWidth) / (count + 1);
+
+  if (marginValue2 >= baseMargin) {
+    item.style.setProperty('margin-left', marginValue2 + 'px');
+
+    for (var _i2 = item; j < count; j++) {
+      _i2.style.setProperty("margin-right", marginValue2 + 'px');
+
+      if (j == count - 1 && marginValue2 < defaultMargin) _i2.style.setProperty("margin-right", defaultMargin + 'px');
+      _i2 = _i2.nextElementSibling;
+    }
+  } else for (var _i3 = item; j < count - 1; j++) {
+    _i3.style.setProperty("margin-right", marginValue1 + 'px');
+
+    _i3 = _i3.nextElementSibling;
+  }
+};
+
+var reset = function reset(item, swiperWidth, margin) {
+  item.style.setProperty('width', (swiperWidth - margin * (count - 1)) / count + 'px');
+  item.style.setProperty('margin-right', margin + 'px');
+  item.style.removeProperty('margin-left');
+};
+
+function calculateAll() {
+  var active = getActive();
+
+  for (var _i4 = 0; _i4 < subSwiper.children.length; _i4++) {
+    if (_i4 == active) break;
+    reset(subSwiper.children[_i4], subSwiper.offsetWidth, 150);
+  }
+
+  if (count < 2) return;
+  setMarginValue(active, subSwiper.offsetWidth, 30, 150);
+}
+
 var subnavSwiper = new Swiper('.subnav__swiper', {
   direction: 'horizontal',
+  slidesPerView: 'auto',
+  on: {
+    init: calculateAll,
+    resize: calculateAll,
+    slideChangeTransitionStart: calculateAll,
+    breakpoint: function breakpoint() {
+      count = 1;
+      if (window.innerWidth >= 750) count = 2;
+      if (window.innerWidth >= 1000) count = 3;
+      if (window.innerWidth >= 1400) count = 4;
+      if (window.innerWidth >= 1550) count = 5;
+    }
+  },
+  spaceBetween: 150,
   breakpoints: {
-    320: {
-      slidesPerView: 1
-    },
-    535: {
+    750: {
       slidesPerView: 2
     },
-    820: {
-      slidesPerView: 3,
-      spaceBetween: 35
+    1000: {
+      slidesPerView: 3
     },
-    1200: {
-      allowTouchMove: false,
-      slidesPerView: 4,
-      spaceBetween: 35
+    1400: {
+      slidesPerView: 4
+    },
+    1550: {
+      slidesPerView: 5
     }
   },
   navigation: {
@@ -244,15 +316,15 @@ function tagsData() {
       baseRight = Wrapperdata.right - parseInt(getComputedStyle(LineWrapper).paddingRight) - 15;
   r = -1, l = -1;
 
-  for (var _i = 0; _i < Line.children.length; _i++) {
-    if (Line.children[_i].getBoundingClientRect().right > baseRight + shift && r == -1) {
-      r = _i;
-      ROffset = Math.ceil(Line.children[_i].getBoundingClientRect().right - baseRight - shift);
+  for (var _i5 = 0; _i5 < Line.children.length; _i5++) {
+    if (Line.children[_i5].getBoundingClientRect().right > baseRight + shift && r == -1) {
+      r = _i5;
+      ROffset = Math.ceil(Line.children[_i5].getBoundingClientRect().right - baseRight - shift);
     }
 
-    if (Line.children[_i].getBoundingClientRect().left < baseLeft + shift && _i > l) {
-      l = _i;
-      LOffset = Math.ceil(baseLeft - Line.children[_i].getBoundingClientRect().left + shift);
+    if (Line.children[_i5].getBoundingClientRect().left < baseLeft + shift && _i5 > l) {
+      l = _i5;
+      LOffset = Math.ceil(baseLeft - Line.children[_i5].getBoundingClientRect().left + shift);
     }
   }
 
