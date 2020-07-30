@@ -240,7 +240,7 @@ var l,
 function tagsData() {
   var shift = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
   var Wrapperdata = LineWrapper.getBoundingClientRect(),
-      baseLeft = Wrapperdata.left + parseInt(getComputedStyle(LineWrapper).paddingLeft),
+      baseLeft = Wrapperdata.left + parseInt(getComputedStyle(LineWrapper).paddingLeft) - 4,
       baseRight = Wrapperdata.right - parseInt(getComputedStyle(LineWrapper).paddingRight) - 15;
   r = -1, l = -1;
 
@@ -265,8 +265,6 @@ function tagsData() {
     ROffset = 0;
     RArrow.classList.add('tags-linewrapper-rightarrow_hidden');
   } else RArrow.classList.remove('tags-linewrapper-rightarrow_hidden');
-
-  console.log(ROffset, LOffset, shift);
 }
 
 tagsData();
