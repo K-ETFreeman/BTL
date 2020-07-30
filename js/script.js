@@ -70,7 +70,6 @@ var setMarginValue = function setMarginValue(item, swiperWidth, baseMargin, defa
 
     _i.style.setProperty('width', currentWidth + 'px');
 
-    console.log(totalWidth);
     _i = _i.nextElementSibling;
   }
 
