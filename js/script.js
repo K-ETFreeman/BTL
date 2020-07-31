@@ -64,13 +64,11 @@ var setMarginValue = function setMarginValue(item, swiperWidth, baseMargin, defa
       totalWidth = 0,
       currentWidth = 0;
 
-  for (var _i = item; j < count; j++) {
-    currentWidth = _i.children[0].offsetWidth;
+  for (var i = item; j < count; j++) {
+    currentWidth = i.children[0].offsetWidth;
     totalWidth += currentWidth;
-
-    _i.style.setProperty('width', currentWidth + 'px');
-
-    _i = _i.nextElementSibling;
+    i.style.setProperty('width', currentWidth + 'px');
+    i = i.nextElementSibling;
   }
 
   j = 0;
@@ -80,16 +78,16 @@ var setMarginValue = function setMarginValue(item, swiperWidth, baseMargin, defa
   if (marginValue2 >= baseMargin) {
     item.style.setProperty('margin-left', marginValue2 + 'px');
 
-    for (var _i2 = item; j < count; j++) {
-      _i2.style.setProperty("margin-right", marginValue2 + 'px');
+    for (var _i = item; j < count; j++) {
+      _i.style.setProperty("margin-right", marginValue2 + 'px');
 
-      if (j == count - 1 && marginValue2 < defaultMargin) _i2.style.setProperty("margin-right", defaultMargin + 'px');
-      _i2 = _i2.nextElementSibling;
+      if (j == count - 1 && marginValue2 < defaultMargin) _i.style.setProperty("margin-right", defaultMargin + 'px');
+      _i = _i.nextElementSibling;
     }
-  } else for (var _i3 = item; j < count - 1; j++) {
-    _i3.style.setProperty("margin-right", marginValue1 + 'px');
+  } else for (var _i2 = item; j < count - 1; j++) {
+    _i2.style.setProperty("margin-right", marginValue1 + 'px');
 
-    _i3 = _i3.nextElementSibling;
+    _i2 = _i2.nextElementSibling;
   }
 };
 
@@ -102,9 +100,9 @@ var reset = function reset(item, swiperWidth, margin) {
 function calculateAll() {
   var active = getActive();
 
-  for (var _i4 = 0; _i4 < subSwiper.children.length; _i4++) {
-    if (_i4 == active) break;
-    reset(subSwiper.children[_i4], subSwiper.offsetWidth, 150);
+  for (var i = 0; i < subSwiper.children.length; i++) {
+    if (i == active) break;
+    reset(subSwiper.children[i], subSwiper.offsetWidth, 150);
   }
 
   if (count < 2) return;
@@ -136,6 +134,9 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
   },
   spaceBetween: 150,
   breakpoints: {
+    320: {
+      slidesPerView: 1
+    },
     750: {
       slidesPerView: 2
     },
@@ -174,9 +175,14 @@ var testimonialsSwiper = new Swiper('.testimonials__container', {
   direction: 'horizontal',
   loop: true,
   breakpoints: {
-    570: {
+    320: {
       slidesPerView: 1,
       centeredSlides: true,
+      spaceBetween: 30
+    },
+    700: {
+      slidesPerView: 2,
+      centeredSlides: false,
       spaceBetween: 50
     },
     900: {
@@ -257,43 +263,6 @@ var socialSwiper = new Swiper('.social__swiper-container ', {
 
 })*/
 
-;
-var linkNav = document.querySelectorAll('[href^="#"]'),
-    V = 1;
-
-function easeOutCubic(x) {
-  if (x > .99) return 1;
-  return 1 - Math.pow(1 - x, 3);
-}
-
-var bodyheight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight;
-
-for (var i = 0; i < linkNav.length; i++) {
-  linkNav[i].addEventListener('click', function (e) {
-    e.preventDefault();
-    var w = window.pageYOffset,
-        hash = this.href.replace(/[^#]*(.*)/, '$1');
-    t = document.querySelector(hash).getBoundingClientRect().top, start = null;
-    t1 = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var V = 1000 / t;
-    V = V * (t > 0 ? 1 : -1);
-    requestAnimationFrame(step);
-
-    function step(time) {
-      if (start === null) start = time;
-      var progress = 1000 * easeOutCubic((time - start) / 1000),
-          r = t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t);
-      window.scrollTo(0, r);
-
-      if (r != w + t && Math.abs(pageYOffset - t) > 1 && (t <= 0 || t1 > pageYOffset)) {
-        requestAnimationFrame(step);
-      } else {
-        location.hash = hash;
-      }
-    }
-  }, false);
-}
-
 ; //tags logic, IE-compatible
 
 if (window.NodeList && !NodeList.prototype.forEach) {
@@ -323,15 +292,15 @@ function tagsData() {
       baseRight = Wrapperdata.right - parseInt(getComputedStyle(LineWrapper).paddingRight) - 15;
   r = -1, l = -1;
 
-  for (var _i5 = 0; _i5 < Line.children.length; _i5++) {
-    if (Line.children[_i5].getBoundingClientRect().right > baseRight + shift && r == -1) {
-      r = _i5;
-      ROffset = Math.ceil(Line.children[_i5].getBoundingClientRect().right - baseRight - shift);
+  for (var i = 0; i < Line.children.length; i++) {
+    if (Line.children[i].getBoundingClientRect().right > baseRight + shift && r == -1) {
+      r = i;
+      ROffset = Math.ceil(Line.children[i].getBoundingClientRect().right - baseRight - shift);
     }
 
-    if (Line.children[_i5].getBoundingClientRect().left < baseLeft + shift && _i5 > l) {
-      l = _i5;
-      LOffset = Math.ceil(baseLeft - Line.children[_i5].getBoundingClientRect().left + shift);
+    if (Line.children[i].getBoundingClientRect().left < baseLeft + shift && i > l) {
+      l = i;
+      LOffset = Math.ceil(baseLeft - Line.children[i].getBoundingClientRect().left + shift);
     }
   }
 
@@ -405,41 +374,6 @@ function scratchFooterTags() {
 window.addEventListener('load', function () {
   scratchFooterTags();
 });
-;
-
-function ibg() {
-  var ibg = document.querySelectorAll(".ibg");
-
-  for (var i = 0; i < ibg.length; i++) {
-    var img = void 0,
-        arr = void 0;
-    arr = ibg[i].querySelectorAll('.ibg__image');
-
-    for (var j = 0; j < arr.length; j++) {
-      if (getComputedStyle(arr[j]).display != "none") {
-        img = arr[j];
-        break;
-      }
-    }
-
-    if (img) {
-      ibg[i].style.backgroundImage = 'url(' + img.getAttribute('src') + ')';
-    } else {
-      obj = ibg[i].getElementsByClassName('grid__item-icon')[0];
-
-      if (obj) {
-        obj.onload = function () {
-          var img = this.contentDocument.getElementsByTagName('svg')[0].cloneNode(true);
-          img.querySelector('path').setAttribute('fill-opacity', '0.2');
-          img.setAttribute('class', "grid__item-bgicon");
-          this.parentNode.appendChild(img);
-        };
-      }
-    }
-  }
-}
-
-ibg();
 ;
 
 function getVideoHtml(dataLink) {
@@ -518,4 +452,18 @@ var textarea = document.querySelector('.calculation__form textarea');
 textarea.addEventListener('input', function () {
   if (textarea.offsetHeight < textarea.scrollHeight) textarea.classList.add('overflow');else textarea.classList.remove('overflow');
 });
+var burger = document.querySelector('.burger');
+
+burger.onclick = function (e) {
+  if (burger.classList.contains('active')) {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+    bodyScrollLock.disableBodyScroll(document.body);
+  } else {
+    bodyScrollLock.enableBodyScroll(document.body);
+  }
+};
+
 objectFitImages();

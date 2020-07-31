@@ -3581,6 +3581,15 @@ section {
   max-width: 100%;
   padding-right: 4%;
   border-right: 1px solid #c4c4c4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .testimonials__slide-image img {
@@ -4759,6 +4768,10 @@ section {
 
   .testimonials__content {
     padding-top: calc(20px + (100vw - 320px) * (0.04464));
+  }
+
+  .testimonials__title {
+    margin-bottom: calc(10px + (100vw - 320px) * (0.04464));
   }
 
   .testimonials__arrow {
