@@ -2384,6 +2384,11 @@ section {
   height: auto;
 }
 
+.BTL__visualwrapper_shadowtop {
+  -webkit-box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
+          box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
+}
+
 .BTL__social {
   position: absolute;
   right: 0;
@@ -3003,7 +3008,7 @@ section {
 }
 
 .stages__bgtext {
-  top: -70px;
+  top: 0px;
 }
 
 .stages__bgtext {
@@ -3420,6 +3425,11 @@ section {
   height: auto;
 }
 
+.results__visualwrapper_shadowtop {
+  -webkit-box-shadow: 281.6px -80px 0px 0px #e1ecf5, 512px -80px 0px 0px #e1ecf5;
+          box-shadow: 281.6px -80px 0px 0px #e1ecf5, 512px -80px 0px 0px #e1ecf5;
+}
+
 .results__bgtext {
   font-size: 250px;
 }
@@ -3493,7 +3503,9 @@ section {
 }
 
 .testimonials__bgtext {
-  top: -110px;
+  top: -40px;
+  left: -10px;
+  font-size: 187px;
 }
 
 .testimonials__swiper {
@@ -3851,6 +3863,10 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
+
+  .results__visual {
+    padding-top: 85px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -4068,6 +4084,10 @@ section {
     width: calc(50% - 30px);
   }
 
+  .stages__title {
+    margin-bottom: 150px;
+  }
+
   .stages__123 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4254,6 +4274,11 @@ section {
             box-shadow: 0 0.3px 20px 0px 0px #e1ecf5, 671px 20px 0px 0px #e1ecf5;
   }
 
+  .BTL__visualwrapper_shadowtop {
+    -webkit-box-shadow: 0 0.55px -30px 0px 0px #e1ecf5, 671px -30px 0px 0px #e1ecf5;
+            box-shadow: 0 0.55px -30px 0px 0px #e1ecf5, 671px -30px 0px 0px #e1ecf5;
+  }
+
   .BTL__social {
     display: none;
   }
@@ -4287,6 +4312,11 @@ section {
   .results__visualwrapper {
     -webkit-box-shadow: 0 0.3px 20px 0px 0px #e1ecf5, 512px 20px 0px 0px #e1ecf5;
             box-shadow: 0 0.3px 20px 0px 0px #e1ecf5, 512px 20px 0px 0px #e1ecf5;
+  }
+
+  .results__visualwrapper_shadowtop {
+    -webkit-box-shadow: 0 0.55px -30px 0px 0px #e1ecf5, 512px -30px 0px 0px #e1ecf5;
+            box-shadow: 0 0.55px -30px 0px 0px #e1ecf5, 512px -30px 0px 0px #e1ecf5;
   }
 
   .results__description {
@@ -5163,15 +5193,15 @@ section {
   .results__bgtext:first-child {
     bottom: calc(100px + (100vw - 320px) * (-0.12712));
   }
+
+  .testimonials__bgtext {
+    font-size: calc(35px + (100vw - 320px) * (0.12881));
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 320px) {
   .testimonials__bgtext {
-    font-size: calc(35px + (100vw - 320px) * (0.12727));
-  }
-
-  .testimonials__bgtext {
-    top: calc(-40px + (100vw - 320px) * (-0.07955));
+    top: calc(20px + (100vw - 320px) * (-0.06818));
   }
 }
 
