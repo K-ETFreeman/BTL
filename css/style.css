@@ -2377,6 +2377,16 @@ body {
   fill: #c7c7c7;
   max-width: 14px;
   max-height: 14px;
+  -webkit-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.simplepopup__icon:hover {
+  fill: #7b7b7b;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .simplepopup__title {
@@ -2396,11 +2406,32 @@ body {
   border: 1px solid #e9e9e9;
   width: 100%;
   max-width: 472px;
-  padding: 10px 0px;
+  padding: 10px 15px;
+  text-indent: 0px;
   background-color: #f8f8f8;
   font-family: Montserrat;
   font-weight: 300;
   font-size: 16px;
+}
+
+.simplepopup__input input::-webkit-input-placeholder {
+  color: #aeaeae;
+}
+
+.simplepopup__input input::-moz-placeholder {
+  color: #aeaeae;
+}
+
+.simplepopup__input input:-ms-input-placeholder {
+  color: #aeaeae;
+}
+
+.simplepopup__input input::-ms-input-placeholder {
+  color: #aeaeae;
+}
+
+.simplepopup__input input::placeholder {
+  color: #aeaeae;
 }
 
 .simplepopup.active {
@@ -2408,8 +2439,12 @@ body {
   pointer-events: auto;
 }
 
-.simplepopup__block {
-  width: 50%;
+.simplepopup__block:first-child {
+  width: 55%;
+}
+
+.simplepopup__block:last-child {
+  width: 45%;
 }
 
 .simplepopup__list-title {
@@ -2438,26 +2473,30 @@ body {
   margin-bottom: 13px;
 }
 
+.simplepopup__list li a:hover {
+  color: #3ea3f2;
+}
+
 .simplepopup__list li:hover a::before {
   opacity: 1;
 }
 
 .simplepopup__list li a {
   display: block;
-  padding: 0px 10px;
   position: relative;
   color: #aeaeae;
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  -webkit-transform: translateX(-10px);
-      -ms-transform: translateX(-10px);
-          transform: translateX(-10px);
+  -webkit-transition: .15s ease-out;
+  -o-transition: .15s ease-out;
+  transition: .15s ease-out;
 }
 
 .simplepopup__list li a::before {
+  color: #3ea3f2;
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 0;
   content: attr(data-text);
   -webkit-transform: translateX(0.5px);
@@ -3630,15 +3669,11 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50;
+  width: 50%;
   height: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-}
-
-.testimonials__content {
-  padding-top: 50px;
 }
 
 .testimonials__title {
@@ -4026,6 +4061,12 @@ section {
 }
 
 @media screen and (min-width: 1025px) {
+  .simplepopup {
+    -webkit-transform: translateX(-8px);
+        -ms-transform: translateX(-8px);
+            transform: translateX(-8px);
+  }
+
   .aboutus__container {
     -webkit-transform: translateX(-4%);
         -ms-transform: translateX(-4%);
@@ -5431,10 +5472,6 @@ section {
 
   .results__title {
     margin-bottom: calc(10px + (100vw - 320px) * (0.03348));
-  }
-
-  .testimonials__content {
-    padding-top: calc(20px + (100vw - 320px) * (0.04464));
   }
 
   .testimonials__title {
