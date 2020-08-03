@@ -381,14 +381,54 @@
     <div class="wrapper">
 
       <div class="headline">
-        <a class="headline__location">
+        <div class="headline__location" style="height: 100%;">
+          
           <div class="svgcontainer svgcontainer_small">
             <svg>
               <use xlink:href="#icon-location"></use>
             </svg>
           </div>
           Петрозаводск
-        </a>
+          <div class="simplepopup" data-trigger="click">
+            <a class="simplepopup__close interactive-trigger" data-target="parent" data-toggleclass="active">
+              <svg class="simplepopup__icon">
+                <use xlink:href="#icon-close"></use>
+              </svg>
+            </a>
+            <div class="simplepopup__title">Выберите город</div>
+            <div class="simplepopup__input">
+              <input type="text" placeholder="Например: Санкт-Петербург">
+            </div>
+            <div class="simplepopup__content">
+              <div class="simplepopup__block">
+                <ul class="simplepopup__list">
+                  <li><a data-text="Москва" href="">Москва</a></li>
+                  <li><a data-text="Санкт-Петербург" href="">Санкт-Петербург</a></li>
+                  <li><a data-text="Новосибирск" href="">Новосибирск</a></li>
+                  <li><a data-text="Екатеринбург" href="">Екатеринбург</a></li>
+                  <li><a data-text="Казань" href="">Казань</a></li>
+                  <li><a data-text="Нижний Новгород" href="">Нижний Новгород</a></li>
+                  <li><a data-text="Челябинск" href="">Челябинск</a></li>
+                  <li><a data-text="Самара" href="">Самара</a></li>
+                  <li><a data-text="Омск" href="">Омск</a></li>
+                  <li><a data-text="Ростов-на-Дону" href="">Ростов-на-Дону</a></li>
+                </ul>
+              </div>
+              <div class="simplepopup__block">
+                <ul class="simplepopup__list">
+                  <li><a data-text="Уфа" href="">Уфа</a></li>
+                  <li><a data-text="Красноярск" href="">Красноярск</a></li>
+                  <li><a data-text="Воронеж" href="">Воронеж</a></li>
+                  <li><a data-text="Пермь" href="">Пермь</a></li>
+                  <li><a data-text="Волгоград" href="">Волгоград</a></li>
+                  <li><a data-text="Краснодар" href="">Краснодар</a></li>
+                  <li><a data-text="Петрозаводск" href="">Петрозаводск</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="headline__links">
           <address class="headline__contacts">
             <a href="tel:+78000000000">
@@ -749,14 +789,14 @@
 
               <div class="tile__title tile__title_width75">Промоутеры
                 аниматоры</div>
-              </a>
+            </a>
             <a href="/" class="tile tile_mini tile_dark">
               <svg class="tile__icon_bg">
                 <use xlink:href="#serv8"></use>
               </svg>
               <div class="tile__title tile__title_width75">Промоутер
                 консультант</div>
-              </a>
+            </a>
           </div>
 
 
@@ -820,12 +860,12 @@
               <img src="./img/grid/serv14.svg" class="tile__svg-bg">
               <div class="tile__title tile__title_width75">Промоутеры
                 с медицинской книжкой</div>
-              </a>
+            </a>
             <a href="/" class="tile tile_mini">
               <img src="./img/grid/bg15.jpg" class="tile__bg">
               <div class="tile__title tile__title_width75">Промоутер
                 в ростовую куклу</div>
-              </a>
+            </a>
           </div>
 
           <div class="grid__tile grid__tile_4 grid__tile_split">
@@ -835,7 +875,7 @@
               </svg>
               <div class="tile__title tile__title_width50">Проведение
                 промо акций</div>
-              </a>
+            </a>
             <a href="/" class="tile tile_mini tile_blue">
               <svg class="tile__icon_bg">
                 <use xlink:href="#serv17"></use>
@@ -856,7 +896,7 @@
             <img src="./img/grid/serv19.svg" class="tile__svg-bg">
             <div class="tile__title tile__title_width50">Проведение
               дегустаций</div>
-            </a>
+          </a>
 
           <div class="grid__tile grid__tile_4 grid__tile_split">
 
@@ -871,7 +911,7 @@
               </svg>
               <div class="tile__title">Ростовые куклы
                 на праздник</div>
-              </a>
+            </a>
           </div>
 
           <div class="grid__tile grid__tile_4 grid__tile_rotating">

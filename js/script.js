@@ -448,6 +448,38 @@ document.querySelectorAll('.interactive-trigger').forEach(function (item) {
   });
 }
 ;
+{
+  var setCoords = function setCoords(item, parCoords) {
+    item.style.setProperty('top', parCoords.bottom + 'px');
+    console.log(parCoords);
+    if (parCoords.left + item.offsetWidth < window.innerWidth) item.style.setProperty('left', parCoords.left + 'px');else item.style.setProperty('right', '0px');
+  };
+
+  document.querySelectorAll('.simplepopup').forEach(function (item) {
+    var trigger = item.getAttribute('data-trigger');
+    var parent = item.parentNode;
+    item.remove();
+    document.body.appendChild(item);
+
+    if (trigger == 'click') {
+      parent.onclick = function (e) {
+        e.preventDefault();
+        if (item.classList.contains('active')) return;
+        setCoords(item, parent.getBoundingClientRect(), parent);
+        item.classList.add('active');
+      };
+    }
+  });
+  window.addEventListener('resize', function () {
+    return document.querySelectorAll('.simplepopup').forEach(function (item) {
+      item.classList.remove('active');
+      item.style.removeProperty('right');
+      item.style.removeProperty('left');
+      item.style.removeProperty('top');
+    });
+  });
+}
+;
 var textarea = document.querySelector('.calculation__form textarea');
 textarea.addEventListener('input', function () {
   if (textarea.offsetHeight < textarea.scrollHeight) textarea.classList.add('overflow');else textarea.classList.remove('overflow');
