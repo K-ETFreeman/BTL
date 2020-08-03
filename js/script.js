@@ -127,8 +127,8 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
     breakpoint: function breakpoint() {
       count = 1;
       if (window.innerWidth >= 750) count = 2;
-      if (window.innerWidth >= 1000) count = 3;
-      if (window.innerWidth >= 1400) count = 4;
+      if (window.innerWidth >= 950) count = 3;
+      if (window.innerWidth >= 1300) count = 4;
       if (window.innerWidth >= 1550) count = 5;
     }
   },
@@ -140,10 +140,10 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
     750: {
       slidesPerView: 2
     },
-    1000: {
+    950: {
       slidesPerView: 3
     },
-    1400: {
+    1300: {
       slidesPerView: 4
     },
     1550: {
