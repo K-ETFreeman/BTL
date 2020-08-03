@@ -995,6 +995,121 @@ textarea.overflow + .attachfile {
   padding-bottom: 56.2%;
 }
 
+.wrapper {
+  width: 74%;
+  max-width: 1420px;
+  margin: 0 auto;
+  min-width: 1050px;
+}
+
+main {
+  position: relative;
+}
+
+main section:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+section {
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.BTL {
+  position: relative;
+}
+
+.BTL__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.BTL__description {
+  width: calc(100% - 671px);
+  max-width: 730px;
+}
+
+.BTL__visual {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 671px;
+}
+
+.BTL__visualwrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  -webkit-box-shadow: 201.3px 40px 0px 0px #e1ecf5, 671px 40px 0px 0px #e1ecf5;
+          box-shadow: 201.3px 40px 0px 0px #e1ecf5, 671px 40px 0px 0px #e1ecf5;
+}
+
+.BTL__visualwrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.BTL__visualwrapper_shadowtop {
+  -webkit-box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
+          box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
+}
+
+.BTL__social {
+  position: absolute;
+  right: 0;
+  top: 120px;
+}
+
+.BTL__button {
+  width: 279px;
+  max-width: 75%;
+}
+
+.BTL__description {
+  position: relative;
+  z-index: 2;
+}
+
+.BTL__title {
+  z-index: 1;
+  position: relative;
+  line-height: 100%;
+  padding-bottom: 50px;
+}
+
+.BTL__bgtext {
+  top: 50px;
+  left: 0;
+}
+
+.BTL__bgtext {
+  z-index: -1;
+  position: absolute;
+  font-size: 147px;
+  font-family: Raleway;
+  font-weight: 800;
+  color: rgba(233, 233, 233, 0.4);
+}
+
+.BTL__text {
+  position: relative;
+  z-index: 2;
+  font-family: Raleway;
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 18px;
+  line-height: 120%;
+  padding-bottom: 70px;
+}
+
+.BTL__visual {
+  padding-left: 50px;
+  text-align: center;
+}
+
 /**
  * Swiper 5.3.8
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1706,121 +1821,6 @@ button.swiper-pagination-bullet {
   z-index: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-
-.wrapper {
-  width: 74%;
-  max-width: 1420px;
-  margin: 0 auto;
-  min-width: 1050px;
-}
-
-main {
-  position: relative;
-}
-
-main section:nth-child(even) {
-  background-color: #f8f8f8;
-}
-
-section {
-  overflow: hidden;
-  padding: 80px 0;
-}
-
-.BTL {
-  position: relative;
-}
-
-.BTL__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.BTL__description {
-  width: calc(100% - 671px);
-  max-width: 730px;
-}
-
-.BTL__visual {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 671px;
-}
-
-.BTL__visualwrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  -webkit-box-shadow: 201.3px 40px 0px 0px #e1ecf5, 671px 40px 0px 0px #e1ecf5;
-          box-shadow: 201.3px 40px 0px 0px #e1ecf5, 671px 40px 0px 0px #e1ecf5;
-}
-
-.BTL__visualwrapper img {
-  width: 100%;
-  height: auto;
-}
-
-.BTL__visualwrapper_shadowtop {
-  -webkit-box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
-          box-shadow: 369.05px -80px 0px 0px #e1ecf5, 671px -80px 0px 0px #e1ecf5;
-}
-
-.BTL__social {
-  position: absolute;
-  right: 0;
-  top: 120px;
-}
-
-.BTL__button {
-  width: 279px;
-  max-width: 75%;
-}
-
-.BTL__description {
-  position: relative;
-  z-index: 2;
-}
-
-.BTL__title {
-  z-index: 1;
-  position: relative;
-  line-height: 100%;
-  padding-bottom: 50px;
-}
-
-.BTL__bgtext {
-  top: 50px;
-  left: 0;
-}
-
-.BTL__bgtext {
-  z-index: -1;
-  position: absolute;
-  font-size: 147px;
-  font-family: Raleway;
-  font-weight: 800;
-  color: rgba(233, 233, 233, 0.4);
-}
-
-.BTL__text {
-  position: relative;
-  z-index: 2;
-  font-family: Raleway;
-  font-weight: 300;
-  opacity: 0.7;
-  font-size: 18px;
-  line-height: 120%;
-  padding-bottom: 70px;
-}
-
-.BTL__visual {
-  padding-left: 50px;
-  text-align: center;
 }
 
 .number {
