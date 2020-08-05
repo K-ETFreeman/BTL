@@ -124,7 +124,6 @@
 
 .header {
   position: relative;
-  font-family: Raleway;
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
 }
@@ -529,6 +528,7 @@
 
 .headline__location {
   cursor: pointer;
+  font-family: Raleway;
   color: #3e3f43;
 }
 
@@ -565,6 +565,7 @@
 }
 
 .headline__recall {
+  font-family: Raleway;
   font-size: 18px;
   color: #3ea3f2;
   font-weight: 500;
@@ -4954,10 +4955,11 @@ body {
     padding-right: calc(7.5px + (100vw - 1440px) * (0.00521));
   }
 
-  .headline__location,
-  .headline__links,
-  .headline__contacts,
-  .headline__recall {
+  .headline__location {
+    font-size: calc(14px + (100vw - 1440px) * (0.00417));
+  }
+
+  .headline__contacts a {
     font-size: calc(12px + (100vw - 1440px) * (0.00833));
   }
 
@@ -5379,19 +5381,12 @@ body {
     padding-right: 7.5px;
   }
 
-  .headline__location,
-  .headline__links,
-  .headline__contacts,
-  .headline__recall {
+  .headline__contacts a {
     font-size: 12px;
   }
 
   .headline__contacts a {
     margin-right: 30px;
-  }
-
-  .headline__recall {
-    font-size: 13.5px;
   }
 
   .headline__recall .svgcontainer {
@@ -5526,6 +5521,14 @@ body {
 @media screen and (min-width: 769px) and (max-width: 1440px) {
   .bgtext {
     font-size: 110.25px;
+  }
+
+  .headline__location {
+    font-size: 14px;
+  }
+
+  .headline__recall {
+    font-size: 13.5px;
   }
 
   h2 {
@@ -5720,11 +5723,11 @@ body {
   }
 
   .headline__location {
-    font-size: calc(14px + (100vw - 320px) * (0.00446));
+    font-size: calc(13px + (100vw - 320px) * (0.00223));
   }
 
-  .headline__location {
-    letter-spacing: calc(-0.5px + (100vw - 320px) * (0.00112));
+  .headline__recall {
+    font-size: calc(13px + (100vw - 320px) * (0.00223));
   }
 
   .headline__recall .svgcontainer {
@@ -5737,14 +5740,6 @@ body {
 
   .headline__recall .svgcontainer {
     height: calc(15px + (100vw - 320px) * (0));
-  }
-
-  .headline__recall {
-    font-size: calc(15px + (100vw - 320px) * (0.0067));
-  }
-
-  .headline__recall {
-    letter-spacing: calc(-1px + (100vw - 320px) * (0.00223));
   }
 
   .item-title {
