@@ -4149,10 +4149,6 @@ body {
     font-size: 16px;
   }
 
-  .services__more {
-    font-size: 16px;
-  }
-
   .tile__title {
     font-size: 18px;
   }
@@ -4174,6 +4170,10 @@ body {
   }
 
   .cases__button {
+    font-size: 16px;
+  }
+
+  .more-details__text {
     font-size: 16px;
   }
 }
@@ -5205,10 +5205,6 @@ body {
     margin-bottom: calc(18.75px + (100vw - 1440px) * (0.01302));
   }
 
-  .services__more {
-    font-size: calc(16px + (100vw - 1440px) * (0.00833));
-  }
-
   .grid__tile {
     min-height: calc(300px + (100vw - 1440px) * (0.20833));
   }
@@ -5283,6 +5279,18 @@ body {
 
   .cases__button {
     font-size: calc(16px + (100vw - 1440px) * (0.00417));
+  }
+
+  .seo__bgtext {
+    font-size: calc(110.25px + (100vw - 1440px) * (0.07656));
+  }
+
+  .seo__bgtext span {
+    font-size: calc(72px + (100vw - 1440px) * (0.05));
+  }
+
+  .more-details__text {
+    font-size: calc(16px + (100vw - 1440px) * (0.00833));
   }
 }
 
@@ -5402,6 +5410,26 @@ body {
     margin-left: 75px;
   }
 
+  .breadcrumbs ul {
+    height: 45px;
+  }
+
+  .breadcrumbs ul li svg {
+    max-width: 6.75px;
+  }
+
+  .breadcrumbs ul li svg {
+    max-height: 6.75px;
+  }
+
+  .breadcrumbs ul li svg {
+    padding-right: 5.25px;
+  }
+
+  .breadcrumbs ul li a {
+    font-size: 10.5px;
+  }
+
   .item-svg {
     max-width: 43.5px;
   }
@@ -5498,26 +5526,6 @@ body {
 @media screen and (min-width: 769px) and (max-width: 1440px) {
   .bgtext {
     font-size: 110.25px;
-  }
-
-  .breadcrumbs ul {
-    height: 45px;
-  }
-
-  .breadcrumbs ul li svg {
-    max-width: 6.75px;
-  }
-
-  .breadcrumbs ul li svg {
-    max-height: 6.75px;
-  }
-
-  .breadcrumbs ul li svg {
-    padding-right: 5.25px;
-  }
-
-  .breadcrumbs ul li a {
-    font-size: 10.5px;
   }
 
   h2 {
@@ -5650,6 +5658,14 @@ body {
 
   .cases__bgtext {
     font-size: 110.25px;
+  }
+
+  .seo__bgtext {
+    font-size: 110.25px;
+  }
+
+  .seo__bgtext span {
+    font-size: 72px;
   }
 }
 
@@ -5924,6 +5940,14 @@ body {
 
   .testimonials__slide-signature img {
     height: calc(40px + (100vw - 320px) * (0.09152));
+  }
+
+  .seo__bgtext {
+    font-size: calc(73px + (100vw - 320px) * (0.08259));
+  }
+
+  .seo__bgtext span {
+    font-size: calc(48px + (100vw - 320px) * (0.05357));
   }
 
   .seo__title {
