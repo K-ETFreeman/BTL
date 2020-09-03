@@ -4012,6 +4012,10 @@ body {
           transform: rotate(-180deg);
 }
 
+.footerTags {
+  background-color: #f8f8f8;
+}
+
 @media screen and (min-width: 0\0) {
   textarea:not(:-ms-input-placeholder) + .attachfile .attachfile__text {
     display: none;
