@@ -126,10 +126,10 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
     slideChangeTransitionStart: calculateAll,
     breakpoint: function breakpoint() {
       count = 1;
-      if (window.innerWidth >= 750) count = 2;
-      if (window.innerWidth >= 950) count = 3;
-      if (window.innerWidth >= 1300) count = 4;
-      if (window.innerWidth >= 1550) count = 5;
+      if (window.innerWidth >= 750) count = Math.min(2, subSwiper.children.length);
+      if (window.innerWidth >= 950) count = Math.min(3, subSwiper.children.length);
+      if (window.innerWidth >= 1300) count = Math.min(4, subSwiper.children.length);
+      if (window.innerWidth >= 1550) count = Math.min(5, subSwiper.children.length);
     }
   },
   spaceBetween: 150,
@@ -138,16 +138,16 @@ var subnavSwiper = new Swiper('.subnav__swiper', {
       slidesPerView: 1
     },
     750: {
-      slidesPerView: 2
+      slidesPerView: Math.min(2, subSwiper.children.length)
     },
     950: {
-      slidesPerView: 3
+      slidesPerView: Math.min(3, subSwiper.children.length)
     },
     1300: {
-      slidesPerView: 4
+      slidesPerView: Math.min(4, subSwiper.children.length)
     },
     1550: {
-      slidesPerView: 5
+      slidesPerView: Math.min(5, subSwiper.children.length)
     }
   },
   navigation: {
@@ -371,9 +371,9 @@ function scratchFooterTags() {
   });
 }
 
-window.addEventListener('load', function () {
+window.addEventListener('load', new function () {
   scratchFooterTags();
-});
+}());
 ;
 
 function getVideoHtml(dataLink) {
@@ -497,4 +497,76 @@ burger.onclick = function (e) {
   }
 };
 
+var awardsSwiper = new Swiper('.awards__container', {
+  direction: 'horizontal',
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30
+    },
+    500: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30
+    },
+    600: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 40
+    },
+    700: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 70
+    },
+    800: {
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 100
+    },
+    850: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30
+    },
+    1000: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 40
+    },
+    1100: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 50
+    },
+    1170: {
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 50
+    },
+    1700: {
+      slidesPerView: 5,
+      centeredSlides: false,
+      spaceBetween: 50
+    }
+  },
+  on: {
+    init: function init() {
+      document.querySelectorAll('.awards__container .popuping').forEach(function (item) {
+        popupCheck(item);
+      });
+    },
+    breakpoint: function breakpoint() {
+      document.querySelectorAll('.awards__container .popuping').forEach(function (item) {
+        return popupCheck(item);
+      });
+    }
+  },
+  navigation: {
+    nextEl: '.awards__arrow_right',
+    prevEl: '.awards__arrow_left'
+  }
+});
 objectFitImages();
